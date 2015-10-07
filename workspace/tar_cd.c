@@ -24,7 +24,7 @@ int main(void) {
   fprintf(f2,"#! /bin/bash\nset -e\n\n");
   while(!feof(f1)) {
     fgets(buf,50,f1);
-    fprintf(f2,"#%s\ntar xf %s\n",buf,buf);
+    fprintf(f2,"#%s\ntar xf %s",buf,buf);
     manipulate_string(buf2,buf);
     fprintf(f2,"cd %s\n\n",buf2);
   }
