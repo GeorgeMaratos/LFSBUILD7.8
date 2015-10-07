@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
-  int i;
+  int i = 0;
   FILE *f1 = NULL, *f2 = NULL;
   char buf[150] = {0}, link[150] = {0};
   f1 = fopen("ls.txt","r");
