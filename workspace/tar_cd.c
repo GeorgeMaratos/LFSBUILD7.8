@@ -22,11 +22,12 @@ int main(void) {
   f1 = fopen("tc.txt","r");
   f2 = fopen("is.sh","w");
   fprintf(f2,"#! /bin/bash\nset -e\n\n");
+  fgets(buf,50,f1);
   while(!feof(f1)) {
-    fgets(buf,50,f1);
     fprintf(f2,"#%s\ntar xf %s",buf,buf);
     manipulate_string(buf2,buf);
     fprintf(f2,"cd %s\n\n",buf2);
+    fgets(buf,50,f1);
   }
   fclose(f1);
   fclose(f2);
