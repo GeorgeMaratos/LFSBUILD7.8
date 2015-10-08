@@ -348,3 +348,6 @@ make install
 
 cd ..
 rm -rf xz-5.2.1
+
+#tail
+chown -R root:root $LFS/tools
